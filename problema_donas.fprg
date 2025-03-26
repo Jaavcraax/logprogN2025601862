@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="problema_donas"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-25 11:25:44 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMjU7MTE6MTU6MjQgUE07MjkxOA=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMjU7MTE6MjU6NDQgUE07MTszMDI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantidaddonas" type="Integer" array="False" size=""/>
+            <declare name="costodonas" type="Integer" array="False" size=""/>
+            <declare name="totaldonas" type="Integer" array="False" size=""/>
+            <assign variable="costodonas" expression="10"/>
+            <output expression="&quot;Cantidad de donas: &quot;" newline="True"/>
+            <input variable="cantidaddonas"/>
+            <if expression="cantidaddonas &gt;= 50">
+                <then>
+                    <output expression="&quot;Costo de dona: $8.00&quot;" newline="True"/>
+                    <assign variable="totaldonas" expression="(costodonas * cantidaddonas) - (cantidaddonas * 2)"/>
+                </then>
+                <else>
+                    <if expression="cantidaddonas &gt;= 30">
+                        <then>
+                            <output expression="&quot;Costo de dona: $9.00&quot;" newline="True"/>
+                            <assign variable="totaldonas" expression="(cantidaddonas * costodonas) - (cantidaddonas * 1)"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;No hay descuento&quot;" newline="True"/>
+                            <assign variable="totaldonas" expression="costodonas * cantidaddonas"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Total por las donas: &quot;&amp;totaldonas" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
