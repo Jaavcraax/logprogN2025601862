@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ej2"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-01 09:47:27 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDE7MDk6NDA6MTkgUE07MjkyMg=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDE7MDk6NDc6MjcgUE07MTszMDM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sexo" type="String" array="False" size=""/>
+            <declare name="inicial" type="String" array="False" size=""/>
+            <output expression="&quot;Ingresa la letra inicial en may&#250;scula de tu g&#233;nero (Hombre o Mujer):&quot;" newline="True"/>
+            <input variable="sexo"/>
+            <output expression="&quot;Ingresa la inicial de tu primer nombre en may&#250;scula:&quot;" newline="True"/>
+            <input variable="inicial"/>
+            <if expression="sexo == &quot;M&quot; and inicial &lt; &quot;M&quot; or sexo == &quot;H&quot; and inicial &gt; &quot;N&quot;">
+                <then>
+                    <output expression="&quot;Eres del grupo A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Eres del grupo B&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
